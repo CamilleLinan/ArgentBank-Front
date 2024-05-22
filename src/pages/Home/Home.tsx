@@ -3,23 +3,14 @@ import iconChat from "../../assets/icon-chat.png";
 import iconMoney from "../../assets/icon-money.png";
 import iconSecurity from "../../assets/icon-security.png";
 import Header from "../../components/Layout/Header/Header";
+import Banner from "../../components/Home/Banner/Banner";
 
 const Home: FC = () => {
   return (
     <>
       <Header />
       <main>
-        <div className="hero">
-          <section className="hero-content">
-            <h2 className="sr-only">Promoted Content</h2>
-            <p className="subtitle">No fees.</p>
-            <p className="subtitle">No minimum deposit.</p>
-            <p className="subtitle">High interest rates.</p>
-            <p className="text">
-              Open a savings account with Argent Bank today!
-            </p>
-          </section>
-        </div>
+        <Banner />
         <section className="features">
           <h2 className="sr-only">Features</h2>
           <div className="feature-item">

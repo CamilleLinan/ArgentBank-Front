@@ -1,8 +1,11 @@
-function App() {
+import IndexRoutes from "./routes/Routes";
+
+const App = () => {
   return (
     <>
+      <IndexRoutes />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

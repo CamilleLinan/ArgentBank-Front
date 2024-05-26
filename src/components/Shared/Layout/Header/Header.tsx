@@ -8,10 +8,10 @@ import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import AuthContext from "../../../../context/authContext";
 
 const iconUser = <FontAwesomeIcon icon={faUserCircle} />;
-const iconLogOut = <FontAwesomeIcon icon={faRightFromBracket} />;
+const iconSignOut = <FontAwesomeIcon icon={faRightFromBracket} />;
 
 const Header: FC = () => {
-  const { isLoggedIn, logOut } = useContext(AuthContext);
+  const { isLoggedIn, signOut } = useContext(AuthContext);
 
   return (
     <header>
@@ -34,8 +34,8 @@ const Header: FC = () => {
                 <span className="main-nav-icon">{iconUser}</span>
                 FirstName
               </NavLink>
-              <NavLink className="main-nav-item" to="/" onClick={logOut}>
-                <span className="main-nav-icon">{iconLogOut}</span>
+              <NavLink className="main-nav-item" to="/" onClick={signOut}>
+                <span className="main-nav-icon">{iconSignOut}</span>
                 Sign Out
               </NavLink>
             </>

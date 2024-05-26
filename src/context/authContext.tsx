@@ -4,7 +4,7 @@ interface ContextProps {
   token: string | undefined;
   isLoggedIn: boolean;
   signIn: (token: string) => void;
-  logOut: () => void;
+  signOut: () => void;
 }
 
 interface ProviderProps {
@@ -15,7 +15,7 @@ const AuthContext = createContext<ContextProps>({
   token: undefined,
   isLoggedIn: false,
   signIn: () => {},
-  logOut: () => {},
+  signOut: () => {},
 });
 
 export const AuthContextProvider = (props: ProviderProps) => {
@@ -26,7 +26,7 @@ export const AuthContextProvider = (props: ProviderProps) => {
     localStorage.setItem("token", token);
   };
 
-  const logOutHandler = () => {
+  const signOutHandler = () => {
     localStorage.clear();
     setToken(undefined);
   };
@@ -37,7 +37,7 @@ export const AuthContextProvider = (props: ProviderProps) => {
     token: token,
     isLoggedIn: userIsLoggedIn,
     signIn: signInHandler,
-    logOut: logOutHandler,
+    signOut: signOutHandler,
   };
 
   return (

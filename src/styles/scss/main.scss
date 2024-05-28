@@ -21,6 +21,16 @@ body {
   flex: 1;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
 .bg-dark {
   background-color: #12002b;
   display: flex;

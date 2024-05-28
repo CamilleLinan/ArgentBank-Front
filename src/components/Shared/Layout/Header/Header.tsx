@@ -11,7 +11,7 @@ const iconUser = <FontAwesomeIcon icon={faUserCircle} />;
 const iconSignOut = <FontAwesomeIcon icon={faRightFromBracket} />;
 
 const Header: FC = () => {
-  const { isLoggedIn, signOut } = useContext(AuthContext);
+  const { userData, isLoggedIn, signOut } = useContext(AuthContext);
 
   return (
     <header>
@@ -29,10 +29,10 @@ const Header: FC = () => {
             <>
               <NavLink
                 className="main-nav-item main-nav-item-user"
-                to="/user/1"
+                to="/profile"
               >
                 <span className="main-nav-icon">{iconUser}</span>
-                FirstName
+                {userData?.firstName}
               </NavLink>
               <NavLink className="main-nav-item" to="/" onClick={signOut}>
                 <span className="main-nav-icon">{iconSignOut}</span>
@@ -40,7 +40,7 @@ const Header: FC = () => {
               </NavLink>
             </>
           ) : (
-            <NavLink className="main-nav-item" to="/sign-in">
+            <NavLink className="main-nav-item" to="/login">
               <span className="main-nav-icon">{iconUser}</span>
               Sign In
             </NavLink>

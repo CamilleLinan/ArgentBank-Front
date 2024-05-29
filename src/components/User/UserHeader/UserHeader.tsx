@@ -1,10 +1,11 @@
-import { FC, useContext } from "react";
+import { FC } from "react";
 import "./_UserHeader.scss";
-import AuthContext from "../../../context/authContext";
+import { useAppSelector } from "../../../redux/store";
 
 const UserHeader: FC = () => {
-  const { userData } = useContext(AuthContext);
+  const { userData } = useAppSelector((state) => state.auth);
   const name = `${userData?.firstName} ${userData?.lastName}`;
+
   return (
     <div className="header">
       <h1>

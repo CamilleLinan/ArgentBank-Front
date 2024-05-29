@@ -60,8 +60,9 @@ const login = async (
   }
 };
 
-const getUserProfile = async (): Promise<ProfileResponse> => {
+const getUserProfile = async (token: string): Promise<ProfileResponse> => {
   try {
+    setAuthToken(token);
     const response = await clientHTTP.post(`/api/v1/user/profile`);
     const data = response.data.body;
     return { success: true, data };

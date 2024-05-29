@@ -1,17 +1,24 @@
-import { FC, useContext } from "react";
+import { FC } from "react";
 import "./_Header.scss";
 import { NavLink } from "react-router-dom";
 import logo from "../../../../assets/argentBankLogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
-import AuthContext from "../../../../context/authContext";
+import { useDispatch } from "react-redux";
+import { useAppSelector } from "../../../../redux/store";
+import { signOut } from "../../../../redux/authSlice";
 
 const iconUser = <FontAwesomeIcon icon={faUserCircle} />;
 const iconSignOut = <FontAwesomeIcon icon={faRightFromBracket} />;
 
 const Header: FC = () => {
-  const { userData, isLoggedIn, signOut } = useContext(AuthContext);
+  const dispatch = useDispatch();
+  const { userData, isLoggedIn } = useAppSelector((state) => state.auth);
+
+  const handleSignOut = () => {
+    dispatch(signOut());
+  };
 
   return (
     <header>
@@ -34,7 +41,7 @@ const Header: FC = () => {
                 <span className="main-nav-icon">{iconUser}</span>
                 {userData?.firstName}
               </NavLink>
-              <NavLink className="main-nav-item" to="/" onClick={signOut}>
+              <NavLink className="main-nav-item" to="/" onClick={handleSignOut}>
                 <span className="main-nav-icon">{iconSignOut}</span>
                 Sign Out
               </NavLink>

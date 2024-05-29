@@ -1,14 +1,14 @@
-import { FC, useContext } from "react";
+import { FC } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import SignIn from "../pages/SignIn/SignIn";
 import User from "../pages/User/User";
 import Layout from "../components/Shared/Layout/Layout";
-import AuthContext from "../context/authContext";
 import NotFound from "../pages/NotFound/NotFound";
+import { useAppSelector } from "../redux/store";
 
 const IndexRoutes: FC = () => {
-  const { isLoggedIn } = useContext(AuthContext);
+  const { isLoggedIn } = useAppSelector((state) => state.auth);
 
   return (
     <BrowserRouter>

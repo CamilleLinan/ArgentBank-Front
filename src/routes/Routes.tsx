@@ -9,7 +9,7 @@ import NotFound from "../pages/NotFound/NotFound";
 
 const IndexRoutes: FC = () => {
   const { isLoggedIn } = useContext(AuthContext);
-  console.log(isLoggedIn);
+
   return (
     <BrowserRouter>
       <Routes>

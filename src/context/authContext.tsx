@@ -28,7 +28,7 @@ export const AuthContextProvider = (props: ProviderProps) => {
 
   const fetchUserProfile = useCallback(async (token: string) => {
     if (token) {
-      const response = await userService.getUserProfile(token);
+      const response = await userService.getUserProfile();
       if (response.success && response.data) {
         setUserData(response.data);
       } else {

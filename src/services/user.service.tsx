@@ -17,18 +17,31 @@ interface ProfileResponse {
   error?: string;
 }
 
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const clientHTTP = axios.create({
+  baseURL: process.env.REACT_APP_BASE_URL,
+});
+
+const setAuthToken = (token: string | null) => {
+  if (token) {
+    clientHTTP.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+  } else {
+    delete clientHTTP.defaults.headers.common["Authorization"];
+  }
+};
 
 const login = async (
   email: string,
   password: string
 ): Promise<LoginResponse | undefined> => {
   try {
-    const response = await axios.post(`${BASE_URL}/api/v1/user/login`, {
+    const response = await clientHTTP.post(`/api/v1/user/login`, {
       email: email,
       password: password,
     });
     const data = response.data;
+    if (data.body && data.body.token) {
+      setAuthToken(data.body.token);
+    }
     return { success: true, data };
   } catch (error) {
     if (axios.isAxiosError(error)) {
@@ -47,17 +60,9 @@ const login = async (
   }
 };
 
-const getUserProfile = async (token: string): Promise<ProfileResponse> => {
+const getUserProfile = async (): Promise<ProfileResponse> => {
   try {
-    const response = await axios.post(
-      `${BASE_URL}/api/v1/user/profile`,
-      {},
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
+    const response = await clientHTTP.post(`/api/v1/user/profile`);
     const data = response.data.body;
     return { success: true, data };
   } catch (error) {

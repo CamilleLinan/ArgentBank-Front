@@ -1,22 +1,30 @@
 import { FC, FormEvent, useState } from "react";
 import "./_SignInForm.scss";
 import { useNavigate } from "react-router-dom";
-import { login } from "../../../redux/authSlice";
+import { login } from "../../../redux/slice/authSlice";
 import { useAppDispatch } from "../../../redux/store";
 
 const SignInForm: FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const [isRemember, setIsRemember] = useState<boolean>(false);
   const [error, setError] = useState<string | undefined>(undefined);
 
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
+
+  const rememberHandler = (e: boolean) => {
+    setIsRemember(e);
+  };
 
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
       const resultAction = await dispatch(login({ email, password }));
       if (login.fulfilled.match(resultAction)) {
+        if (isRemember) {
+          localStorage.setItem("token", resultAction.payload);
+        }
         setError(undefined);
         navigate("/");
       } else {
@@ -51,7 +59,11 @@ const SignInForm: FC = () => {
           />
         </div>
         <div className="input-remember">
-          <input type="checkbox" id="remember-me" />
+          <input
+            type="checkbox"
+            id="remember-me"
+            onChange={(e) => rememberHandler(e.target.checked)}
+          />
           <label htmlFor="remember-me">Remember me</label>
         </div>
         {error && <p className="form-error">{error}</p>}

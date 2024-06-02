@@ -3,7 +3,7 @@ import "./_UserHeader.scss";
 import { useAppSelector } from "../../../redux/store";
 
 const UserHeader: FC = () => {
-  const { userData } = useAppSelector((state) => state.auth);
+  const { userData } = useAppSelector((state) => state.user);
   const name = `${userData?.firstName} ${userData?.lastName}`;
 
   return (

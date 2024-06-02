@@ -21,14 +21,6 @@ const clientHTTP = axios.create({
   baseURL: process.env.REACT_APP_BASE_URL,
 });
 
-const setAuthToken = (token: string | null) => {
-  if (token) {
-    clientHTTP.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-  } else {
-    delete clientHTTP.defaults.headers.common["Authorization"];
-  }
-};
-
 const login = async (
   email: string,
   password: string
@@ -40,7 +32,9 @@ const login = async (
     });
     const data = response.data;
     if (data.body && data.body.token) {
-      setAuthToken(data.body.token);
+      clientHTTP.defaults.headers.common[
+        "Authorization"
+      ] = `Bearer ${data.body.token}`;
     }
     return { success: true, data };
   } catch (error) {
@@ -60,9 +54,8 @@ const login = async (
   }
 };
 
-const getUserProfile = async (token: string): Promise<ProfileResponse> => {
+const getUserProfile = async (): Promise<ProfileResponse> => {
   try {
-    setAuthToken(token);
     const response = await clientHTTP.post(`/api/v1/user/profile`);
     const data = response.data.body;
     return { success: true, data };

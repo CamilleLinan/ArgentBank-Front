@@ -7,14 +7,15 @@ import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import { useAppSelector } from "../../../../redux/store";
-import { signOut } from "../../../../redux/authSlice";
+import { signOut } from "../../../../redux/slice/authSlice";
 
 const iconUser = <FontAwesomeIcon icon={faUserCircle} />;
 const iconSignOut = <FontAwesomeIcon icon={faRightFromBracket} />;
 
 const Header: FC = () => {
   const dispatch = useDispatch();
-  const { userData, isLoggedIn } = useAppSelector((state) => state.auth);
+  const { isLoggedIn } = useAppSelector((state) => state.auth);
+  const { userData } = useAppSelector((state) => state.user);
 
   const handleSignOut = () => {
     dispatch(signOut());

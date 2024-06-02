@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "./redux/store";
 import IndexRoutes from "./routes/Routes";
-import { fetchUserProfile } from "./redux/authSlice";
+import { fetchUserProfile } from "./redux/slice/userSlice";
 
 const App = () => {
   const dispatch = useAppDispatch();
@@ -9,7 +9,7 @@ const App = () => {
   const tokenLocalStorage = localStorage.getItem("token");
 
   useEffect(() => {
-    if (tokenLocalStorage) {
+    if (token || tokenLocalStorage) {
       dispatch(fetchUserProfile());
     }
   }, [token, tokenLocalStorage, dispatch]);

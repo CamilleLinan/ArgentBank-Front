@@ -6,13 +6,12 @@ import { fetchUserProfile } from "./redux/slice/userSlice";
 const App = () => {
   const dispatch = useAppDispatch();
   const token = useAppSelector((state) => state.auth.token);
-  const tokenLocalStorage = localStorage.getItem("token");
 
   useEffect(() => {
-    if (token || tokenLocalStorage) {
+    if (token) {
       dispatch(fetchUserProfile());
     }
-  }, [token, tokenLocalStorage, dispatch]);
+  }, [token, dispatch]);
 
   return (
     <>

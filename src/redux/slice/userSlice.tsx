@@ -15,17 +15,13 @@ const initialState: UserState = {
 export const fetchUserProfile = createAsyncThunk(
   "auth/fetchUserProfile",
   async (_, thunkAPI) => {
-    const token =
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (thunkAPI.getState() as any).auth.token;
-    if (token) {
-      const response = await userService.getUserProfile();
-      if (response.success && response.data) {
-        return response.data;
-      } else {
-        return thunkAPI.rejectWithValue(response.error);
-      }
+    const response = await userService.getUserProfile();
+    if (response.success && response.data) {
+      return response.data;
+    } else {
+      return thunkAPI.rejectWithValue(response.error);
     }
+    // }
   }
 );
 

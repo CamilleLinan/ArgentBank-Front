@@ -51,7 +51,7 @@ const UserHeader: FC = () => {
           <form onSubmit={onSubmit} className="header-form">
             <div className="header-form-inputs">
               <div className="header-form-inputs-input">
-                <label htmlFor="firstName">Firstname</label>
+                <label htmlFor="firstName"></label>
                 <input
                   type="text"
                   name="firstName"
@@ -61,7 +61,7 @@ const UserHeader: FC = () => {
                 />
               </div>
               <div className="header-form-inputs-input">
-                <label htmlFor="lastName">Lastname</label>
+                <label htmlFor="lastName"></label>
                 <input
                   type="text"
                   name="lastName"
@@ -71,19 +71,28 @@ const UserHeader: FC = () => {
                 />
               </div>
             </div>
-            <button type="submit" className="button button-submit">
-              Submit
-            </button>
+            <div className="header-form-buttons">
+              <button
+                type="reset"
+                className="button button-cancel"
+                onClick={handleEditMode}
+              >
+                Cancel
+              </button>
+              <button type="submit" className="button button-submit">
+                Save
+              </button>
+            </div>
           </form>
         ) : (
           <>
             {firstName} {lastName}!
+            <button className="button" onClick={handleEditMode}>
+              Edit Name
+            </button>
           </>
         )}
       </h1>
-      <button className="button" onClick={handleEditMode}>
-        Edit Name
-      </button>
     </div>
   );
 };

@@ -17,6 +17,12 @@ interface ProfileResponse {
   error?: string;
 }
 
+interface UpdateResponse {
+  success: boolean;
+  data?: { body: User };
+  error?: string;
+}
+
 const clientHTTP = axios.create({
   baseURL: process.env.REACT_APP_BASE_URL,
 });
@@ -80,4 +86,36 @@ const getUserProfile = async (): Promise<ProfileResponse> => {
   }
 };
 
-export default { login, getUserProfile };
+const updateUserProfile = async (
+  firstName: string,
+  lastName: string
+): Promise<UpdateResponse> => {
+  try {
+    const response = await clientHTTP.put("/api/v1/user/profile", {
+      firstName,
+      lastName,
+    });
+    const data = response.data;
+    return { success: true, data };
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      if (error.response?.status === 404) {
+        return {
+          success: false,
+          error: "User not found",
+        };
+      } else {
+        return {
+          success: false,
+          error: "An internal error occurred",
+        };
+      }
+    }
+    return {
+      success: false,
+      error: "An unexpected error occurred",
+    };
+  }
+};
+
+export default { login, getUserProfile, updateUserProfile };

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import "./_Header.scss";
 import { NavLink } from "react-router-dom";
 import logo from "../../../../assets/argentBankLogo.png";
@@ -16,6 +16,13 @@ const Header: FC = () => {
   const dispatch = useDispatch();
   const { isLoggedIn } = useAppSelector((state) => state.auth);
   const { userData } = useAppSelector((state) => state.user);
+  const [firstName, setFirstname] = useState<string>(userData?.firstName || "");
+
+  useEffect(() => {
+    if (userData) {
+      setFirstname(userData.firstName);
+    }
+  }, [userData]);
 
   const handleSignOut = () => {
     dispatch(signOut());
@@ -40,7 +47,7 @@ const Header: FC = () => {
                 to="/profile"
               >
                 <span className="main-nav-icon">{iconUser}</span>
-                {userData?.firstName}
+                {firstName}
               </NavLink>
               <NavLink className="main-nav-item" to="/" onClick={handleSignOut}>
                 <span className="main-nav-icon">{iconSignOut}</span>

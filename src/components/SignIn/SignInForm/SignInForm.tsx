@@ -55,11 +55,6 @@ const SignInForm: FC = () => {
           <label htmlFor="remember-me">Remember me</label>
         </div>
         {error && <p className="form-error">{error}</p>}
-        {/* PLACEHOLDER DUE TO STATIC SITE */}
-        {/* <a href="./user.html" className="sign-in-button">
-          Sign In
-        </a> */}
-        {/* SHOULD BE THE BUTTON BELOW */}
         <button type="submit" className="sign-in-button">
           Sign In
         </button>

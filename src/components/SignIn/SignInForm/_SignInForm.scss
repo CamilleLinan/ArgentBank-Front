@@ -13,6 +13,11 @@
     border-radius: 5px;
     color: #fff;
     box-sizing: border-box;
+    transition: all 250ms ease-in-out;
+    &:hover {
+      background-color: $tryColor;
+      border-color: $tryColor;
+    }
   }
 
   &-content {

@@ -1,17 +1,32 @@
-import { FC, useContext } from "react";
+import { FC, useEffect, useState } from "react";
 import "./_Header.scss";
 import { NavLink } from "react-router-dom";
 import logo from "../../../../assets/argentBankLogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
-import AuthContext from "../../../../context/authContext";
+import { useDispatch } from "react-redux";
+import { useAppSelector } from "../../../../redux/store";
+import { signOut } from "../../../../redux/slice/authSlice";
 
 const iconUser = <FontAwesomeIcon icon={faUserCircle} />;
 const iconSignOut = <FontAwesomeIcon icon={faRightFromBracket} />;
 
 const Header: FC = () => {
-  const { isLoggedIn, signOut } = useContext(AuthContext);
+  const dispatch = useDispatch();
+  const { isLoggedIn } = useAppSelector((state) => state.auth);
+  const { userData } = useAppSelector((state) => state.user);
+  const [firstName, setFirstname] = useState<string>(userData?.firstName || "");
+
+  useEffect(() => {
+    if (userData) {
+      setFirstname(userData.firstName);
+    }
+  }, [userData]);
+
+  const handleSignOut = () => {
+    dispatch(signOut());
+  };
 
   return (
     <header>
@@ -29,18 +44,18 @@ const Header: FC = () => {
             <>
               <NavLink
                 className="main-nav-item main-nav-item-user"
-                to="/user/1"
+                to="/profile"
               >
                 <span className="main-nav-icon">{iconUser}</span>
-                FirstName
+                {firstName}
               </NavLink>
-              <NavLink className="main-nav-item" to="/" onClick={signOut}>
+              <NavLink className="main-nav-item" to="/" onClick={handleSignOut}>
                 <span className="main-nav-icon">{iconSignOut}</span>
                 Sign Out
               </NavLink>
             </>
           ) : (
-            <NavLink className="main-nav-item" to="/sign-in">
+            <NavLink className="main-nav-item" to="/login">
               <span className="main-nav-icon">{iconUser}</span>
               Sign In
             </NavLink>

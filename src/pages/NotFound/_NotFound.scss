@@ -1,0 +1,29 @@
+@import "@scss/variables";
+
+.error {
+  color: white;
+
+  &-code {
+    font-weight: bold;
+    font-size: 42px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  &-text {
+    font-size: 18px;
+  }
+
+  &-link {
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: all 250ms ease-in-out;
+    &:hover {
+      color: $pryColor;
+      border-color: $pryColor;
+      transform: scale(1.1);
+    }
+  }
+}

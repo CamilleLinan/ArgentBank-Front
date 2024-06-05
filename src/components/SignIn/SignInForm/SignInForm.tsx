@@ -1,32 +1,30 @@
-import { FC, FormEvent, useContext, useState } from "react";
+import { FC, FormEvent, useState } from "react";
 import "./_SignInForm.scss";
-import UserService from "../../../services/user.service";
-import AuthContext from "../../../context/authContext";
 import { useNavigate } from "react-router-dom";
+import { login } from "../../../redux/slice/authSlice";
+import { useAppDispatch } from "../../../redux/store";
 
 const SignInForm: FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string | undefined>(undefined);
 
-  const { signIn } = useContext(AuthContext);
-  const onNavigate = useNavigate();
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    await UserService.login(email, password)
-      .then((res) => {
-        if (res?.success && res.data) {
-          setError(undefined);
-          signIn(res.data.body.token);
-          onNavigate("/");
-        } else {
-          setError(res?.error);
-        }
-      })
-      .catch(() => {
-        setError("Une erreur interne est survenue");
-      });
+    try {
+      const resultAction = await dispatch(login({ email, password }));
+      if (login.fulfilled.match(resultAction)) {
+        setError(undefined);
+        navigate("/");
+      } else {
+        setError(resultAction.payload as string);
+      }
+    } catch {
+      setError("Une erreur interne est survenue");
+    }
   };
 
   return (
@@ -57,11 +55,6 @@ const SignInForm: FC = () => {
           <label htmlFor="remember-me">Remember me</label>
         </div>
         {error && <p className="form-error">{error}</p>}
-        {/* PLACEHOLDER DUE TO STATIC SITE */}
-        {/* <a href="./user.html" className="sign-in-button">
-          Sign In
-        </a> */}
-        {/* SHOULD BE THE BUTTON BELOW */}
         <button type="submit" className="sign-in-button">
           Sign In
         </button>

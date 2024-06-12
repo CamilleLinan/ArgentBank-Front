@@ -1,0 +1,418 @@
+{
+  "ACCOUNTS": [
+    {
+      "id": "1",
+      "userId": "664e22cc347a68ece7bdf90f",
+      "title": "Argent Bank Checking (x8349)",
+      "amount": "2,082.79",
+      "description": "Available Balance",
+      "transactions": [
+        {
+          "id": "101",
+          "date": "2023-01-01T10:00:00Z",
+          "description": "Achat supermarché",
+          "amount": 45.32,
+          "balance": 954.68,
+          "type": "Debit",
+          "category": "Groceries",
+          "notes": "Achat des courses hebdomadaires"
+        },
+        {
+          "id": "102",
+          "date": "2023-01-05T15:30:00Z",
+          "description": "Salaire",
+          "amount": 1500.0,
+          "balance": 2454.68,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Salaire mensuel"
+        },
+        {
+          "id": "103",
+          "date": "2023-01-10T12:00:00Z",
+          "description": "Essence",
+          "amount": 60.0,
+          "balance": 1394.68,
+          "type": "Debit",
+          "category": "Transportation",
+          "notes": "Plein de carburant"
+        },
+        {
+          "id": "104",
+          "date": "2023-01-15T09:00:00Z",
+          "description": "Facture d'eau",
+          "amount": 30.0,
+          "balance": 1364.68,
+          "type": "Debit",
+          "category": "Utilities",
+          "notes": "Paiement facture d'eau"
+        },
+        {
+          "id": "105",
+          "date": "2023-01-20T17:00:00Z",
+          "description": "Vente sur eBay",
+          "amount": 100.0,
+          "balance": 1464.68,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Vente d'un objet"
+        },
+        {
+          "id": "106",
+          "date": "2023-01-25T14:00:00Z",
+          "description": "Restaurant",
+          "amount": 75.0,
+          "balance": 1389.68,
+          "type": "Debit",
+          "category": "Dining",
+          "notes": "Dîner au restaurant"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "userId": "664e22cc347a68ece7bdf90f",
+      "title": "Argent Bank Savings (x6712)",
+      "amount": "10,928.42",
+      "description": "Available Balance",
+      "transactions": [
+        {
+          "id": "201",
+          "date": "2023-02-01T08:45:00Z",
+          "description": "Facture d'électricité",
+          "amount": 75.0,
+          "balance": 1125.0,
+          "type": "Debit",
+          "category": "Utilities",
+          "notes": "Paiement de la facture d'électricité"
+        },
+        {
+          "id": "202",
+          "date": "2023-02-05T13:00:00Z",
+          "description": "Restaurant",
+          "amount": 58.5,
+          "balance": 1066.5,
+          "type": "Debit",
+          "category": "Dining",
+          "notes": "Dîner au restaurant"
+        },
+        {
+          "id": "203",
+          "date": "2023-02-10T09:00:00Z",
+          "description": "Revenu freelance",
+          "amount": 300.0,
+          "balance": 1366.5,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Paiement pour projet freelance"
+        },
+        {
+          "id": "204",
+          "date": "2023-02-15T11:00:00Z",
+          "description": "Courses",
+          "amount": 80.0,
+          "balance": 1286.5,
+          "type": "Debit",
+          "category": "Groceries",
+          "notes": "Achat des courses"
+        },
+        {
+          "id": "205",
+          "date": "2023-02-20T16:00:00Z",
+          "description": "Abonnement Netflix",
+          "amount": 15.0,
+          "balance": 1271.5,
+          "type": "Debit",
+          "category": "Entertainment",
+          "notes": "Paiement abonnement mensuel"
+        },
+        {
+          "id": "206",
+          "date": "2023-02-25T10:30:00Z",
+          "description": "Virement reçu",
+          "amount": 500.0,
+          "balance": 1771.5,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Virement reçu d'un ami"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "userId": "664e22cc347a68ece7bdf90f",
+      "title": "Argent Bank Credit Card (x8349)",
+      "amount": "184.30",
+      "description": "Current Balance",
+      "transactions": [
+        {
+          "id": "301",
+          "date": "2023-03-01T08:00:00Z",
+          "description": "Abonnement Spotify",
+          "amount": 9.99,
+          "balance": 990.01,
+          "type": "Debit",
+          "category": "Entertainment",
+          "notes": "Paiement abonnement mensuel"
+        },
+        {
+          "id": "302",
+          "date": "2023-03-05T10:00:00Z",
+          "description": "Café",
+          "amount": 4.5,
+          "balance": 985.51,
+          "type": "Debit",
+          "category": "Dining",
+          "notes": "Café du matin"
+        },
+        {
+          "id": "303",
+          "date": "2023-03-10T14:00:00Z",
+          "description": "Achat Amazon",
+          "amount": 120.0,
+          "balance": 865.51,
+          "type": "Debit",
+          "category": "Shopping",
+          "notes": "Achat divers"
+        },
+        {
+          "id": "304",
+          "date": "2023-03-15T18:00:00Z",
+          "description": "Virement reçu",
+          "amount": 200.0,
+          "balance": 1065.51,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Virement d'un membre de la famille"
+        },
+        {
+          "id": "305",
+          "date": "2023-03-20T09:30:00Z",
+          "description": "Paiement facture internet",
+          "amount": 50.0,
+          "balance": 1015.51,
+          "type": "Debit",
+          "category": "Utilities",
+          "notes": "Paiement mensuel"
+        },
+        {
+          "id": "306",
+          "date": "2023-03-25T12:00:00Z",
+          "description": "Revenu location",
+          "amount": 700.0,
+          "balance": 1715.51,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Revenu mensuel de location"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "userId": "664e22cc347a68ece7bdf910",
+      "title": "Argent Bank Checking (x8349)",
+      "amount": "2,082.79",
+      "description": "Available Balance",
+      "transactions": [
+        {
+          "id": "401",
+          "date": "2023-04-01T11:00:00Z",
+          "description": "Achat pharmacie",
+          "amount": 30.0,
+          "balance": 970.0,
+          "type": "Debit",
+          "category": "Health",
+          "notes": "Achat de médicaments"
+        },
+        {
+          "id": "402",
+          "date": "2023-04-05T13:30:00Z",
+          "description": "Salaire",
+          "amount": 1600.0,
+          "balance": 2570.0,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Salaire mensuel"
+        },
+        {
+          "id": "403",
+          "date": "2023-04-10T15:00:00Z",
+          "description": "Course Uber",
+          "amount": 25.0,
+          "balance": 1545.0,
+          "type": "Debit",
+          "category": "Transportation",
+          "notes": "Course Uber vers l'aéroport"
+        },
+        {
+          "id": "404",
+          "date": "2023-04-15T09:30:00Z",
+          "description": "Facture de gaz",
+          "amount": 40.0,
+          "balance": 1505.0,
+          "type": "Debit",
+          "category": "Utilities",
+          "notes": "Paiement facture de gaz"
+        },
+        {
+          "id": "405",
+          "date": "2023-04-20T16:00:00Z",
+          "description": "Vente sur Le Bon Coin",
+          "amount": 150.0,
+          "balance": 1655.0,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Vente d'un objet sur Le Bon Coin"
+        },
+        {
+          "id": "406",
+          "date": "2023-04-25T18:00:00Z",
+          "description": "Dîner",
+          "amount": 65.0,
+          "balance": 1590.0,
+          "type": "Debit",
+          "category": "Dining",
+          "notes": "Dîner au restaurant"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "userId": "664e22cc347a68ece7bdf910",
+      "title": "Argent Bank Savings (x6712)",
+      "amount": "10,928.42",
+      "description": "Available Balance",
+      "transactions": [
+        {
+          "id": "501",
+          "date": "2023-05-01T10:00:00Z",
+          "description": "Facture d'internet",
+          "amount": 40.0,
+          "balance": 960.0,
+          "type": "Debit",
+          "category": "Utilities",
+          "notes": "Paiement de la facture d'internet"
+        },
+        {
+          "id": "502",
+          "date": "2023-05-05T12:00:00Z",
+          "description": "Abonnement gym",
+          "amount": 50.0,
+          "balance": 910.0,
+          "type": "Debit",
+          "category": "Health",
+          "notes": "Abonnement mensuel à la salle de sport"
+        },
+        {
+          "id": "503",
+          "date": "2023-05-10T14:30:00Z",
+          "description": "Paiement freelance",
+          "amount": 400.0,
+          "balance": 1310.0,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Paiement pour un projet freelance"
+        },
+        {
+          "id": "504",
+          "date": "2023-05-15T09:00:00Z",
+          "description": "Courses",
+          "amount": 70.0,
+          "balance": 1240.0,
+          "type": "Debit",
+          "category": "Groceries",
+          "notes": "Achat des courses hebdomadaires"
+        },
+        {
+          "id": "505",
+          "date": "2023-05-20T17:00:00Z",
+          "description": "Remboursement",
+          "amount": 100.0,
+          "balance": 1340.0,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Remboursement d'un ami"
+        },
+        {
+          "id": "506",
+          "date": "2023-05-25T11:00:00Z",
+          "description": "Sortie cinéma",
+          "amount": 25.0,
+          "balance": 1315.0,
+          "type": "Debit",
+          "category": "Entertainment",
+          "notes": "Sortie cinéma avec des amis"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "userId": "664e22cc347a68ece7bdf910",
+      "title": "Argent Bank Credit Card (x8349)",
+      "amount": "184.30",
+      "description": "Current Balance",
+      "transactions": [
+        {
+          "id": "601",
+          "date": "2023-06-01T08:00:00Z",
+          "description": "Achat de livres",
+          "amount": 60.0,
+          "balance": 940.0,
+          "type": "Debit",
+          "category": "Education",
+          "notes": "Achat de livres pour les études"
+        },
+        {
+          "id": "602",
+          "date": "2023-06-05T14:00:00Z",
+          "description": "Café",
+          "amount": 5.0,
+          "balance": 935.0,
+          "type": "Debit",
+          "category": "Dining",
+          "notes": "Café du matin"
+        },
+        {
+          "id": "603",
+          "date": "2023-06-10T09:00:00Z",
+          "description": "Abonnement streaming",
+          "amount": 12.0,
+          "balance": 923.0,
+          "type": "Debit",
+          "category": "Entertainment",
+          "notes": "Abonnement à un service de streaming"
+        },
+        {
+          "id": "604",
+          "date": "2023-06-15T10:00:00Z",
+          "description": "Revenu de location",
+          "amount": 800.0,
+          "balance": 1723.0,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Revenu mensuel de location"
+        },
+        {
+          "id": "605",
+          "date": "2023-06-20T16:00:00Z",
+          "description": "Paiement facture d'eau",
+          "amount": 30.0,
+          "balance": 1693.0,
+          "type": "Debit",
+          "category": "Utilities",
+          "notes": "Paiement facture d'eau"
+        },
+        {
+          "id": "606",
+          "date": "2023-06-25T12:00:00Z",
+          "description": "Achat de vêtements",
+          "amount": 150.0,
+          "balance": 1543.0,
+          "type": "Debit",
+          "category": "Shopping",
+          "notes": "Achat de nouveaux vêtements"
+        }
+      ]
+    }
+  ]
+}

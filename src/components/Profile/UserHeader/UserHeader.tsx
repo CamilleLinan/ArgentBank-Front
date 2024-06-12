@@ -1,11 +1,15 @@
 import { FC, FormEvent, useEffect, useState } from "react";
 import "./_UserHeader.scss";
-import { useAppDispatch, useAppSelector } from "../../../redux/store";
+import { useAppDispatch } from "../../../redux/store";
 import userService from "../../../services/user.service";
 import { updateUserProfile } from "../../../redux/slice/userSlice";
+import { User } from "../../../models/user.model";
 
-const UserHeader: FC = () => {
-  const { userData } = useAppSelector((state) => state.user);
+interface UserProps {
+  userData: User | undefined;
+}
+
+const UserHeader: FC<UserProps> = ({ userData }) => {
   const dispatch = useAppDispatch();
 
   const [onEditMode, setOnEditMode] = useState<boolean>(false);

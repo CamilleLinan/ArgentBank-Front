@@ -12,13 +12,16 @@ const getUserAccounts = async (
     : Promise.reject(undefined);
 };
 
-const getUserAccountById = async (
-  accountId: string
+const getAccountById = async (
+  accountId: string,
+  userId: string
 ): Promise<Account | undefined> => {
   const account = mockedAccounts.ACCOUNTS.find(
-    (account) => account.id === accountId
+    (account) => account.id === accountId && account.userId === userId
   );
+  console.log("account-id", accountId);
+  console.log("account-service", account);
   return account ? Promise.resolve(account) : Promise.reject(undefined);
 };
 
-export default { getUserAccounts, getUserAccountById };
+export default { getUserAccounts, getAccountById };

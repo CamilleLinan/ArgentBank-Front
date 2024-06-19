@@ -1,3 +1,5 @@
+@import "@scss/variables";
+
 html {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -29,6 +31,16 @@ a {
 
 button {
   cursor: pointer;
+}
+
+input,
+select {
+  box-sizing: border-box;
+  padding: 3px;
+
+  &:focus {
+    outline-color: $pryColor;
+  }
 }
 
 .bg-dark {

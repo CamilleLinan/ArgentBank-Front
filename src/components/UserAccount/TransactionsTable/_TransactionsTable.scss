@@ -1,3 +1,5 @@
+@import "@scss/variables";
+
 .transactions {
   display: flex;
   justify-content: center;
@@ -18,8 +20,12 @@
     }
 
     &-icon {
-      margin-left: 10px;
+      margin-left: 5px;
       cursor: pointer;
+      padding: 5px;
+      &:hover path {
+        fill: $pryColor;
+      }
     }
   }
 }
@@ -39,8 +45,13 @@
 
     & .transaction-infos {
       cursor: pointer;
+
       & td {
         padding: 10px 5px;
+      }
+
+      & .date {
+        width: 20%;
       }
     }
 
@@ -52,6 +63,7 @@
       &-positive {
         color: rgb(80, 157, 80);
       }
+
       &-negative {
         color: rgb(157, 80, 80);
       }

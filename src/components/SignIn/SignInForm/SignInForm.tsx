@@ -5,8 +5,8 @@ import { login } from "../../../redux/slice/authSlice";
 import { useAppDispatch } from "../../../redux/store";
 
 const SignInForm: FC = () => {
-  const [email, setEmail] = useState<string>("tony@stark.com");
-  const [password, setPassword] = useState<string>("password123");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string | undefined>(undefined);
 
   const dispatch = useAppDispatch();
@@ -37,7 +37,6 @@ const SignInForm: FC = () => {
           <input
             type="email"
             id="email"
-            defaultValue={"tony@stark.com"}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
@@ -47,7 +46,6 @@ const SignInForm: FC = () => {
           <input
             type="password"
             id="password"
-            defaultValue={"password123"}
             onChange={(e) => setPassword(e.target.value)}
             required
           />

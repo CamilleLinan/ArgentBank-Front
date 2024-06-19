@@ -30,13 +30,10 @@ const UserAccount: FC = () => {
     fetchUserAccount();
   }, [id, userData]);
 
-  console.log("account", account);
-  console.log("transac", accountTransactions);
-
   return (
     <>
       <main className="main bg-dark user-account">
-        {account ? (
+        {account && (
           <>
             <AccountTile
               key={account.id}
@@ -47,7 +44,7 @@ const UserAccount: FC = () => {
             />
             <TransactionsTable transactions={accountTransactions} />
           </>
-        ) : null}
+        )}
       </main>
     </>
   );

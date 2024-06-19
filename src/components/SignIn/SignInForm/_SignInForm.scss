@@ -1,0 +1,68 @@
+@import "@scss/variables";
+
+.sign-in {
+  &-button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    border: 1px solid $pryColor;
+    background-color: $pryColor;
+    border-radius: 5px;
+    color: #fff;
+    box-sizing: border-box;
+    transition: all 250ms ease-in-out;
+    &:hover {
+      background-color: $tryColor;
+      border-color: $tryColor;
+    }
+  }
+
+  &-content {
+    box-sizing: border-box;
+    background-color: white;
+    width: 300px;
+    padding: 2rem;
+
+    & h1 {
+      margin-top: 0;
+    }
+  }
+
+  &-icon {
+    font-size: 5rem;
+  }
+}
+
+.input {
+  &-remember {
+    display: flex;
+
+    & label {
+      margin-left: 0.25rem;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 1rem;
+
+    & label {
+      font-weight: bold;
+    }
+
+    & input {
+      padding: 5px;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.form-error {
+  font-size: 13px;
+  color: rgb(211, 0, 0);
+}

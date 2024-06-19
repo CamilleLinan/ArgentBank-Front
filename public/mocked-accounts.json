@@ -1,0 +1,418 @@
+{
+  "ACCOUNTS": [
+    {
+      "id": "1",
+      "userId": "664e22cc347a68ece7bdf90f",
+      "title": "Argent Bank Checking (x8349)",
+      "amount": "2,082.79",
+      "description": "Available Balance",
+      "transactions": [
+        {
+          "id": "106",
+          "date": "2023-01-25T14:00:00Z",
+          "description": "Dinner at restaurant",
+          "amount": "-75.00",
+          "balance": 2082.79,
+          "type": "Debit",
+          "category": "Dining",
+          "notes": "Dinner at restaurant"
+        },
+        {
+          "id": "105",
+          "date": "2023-01-20T17:00:00Z",
+          "description": "eBay sale",
+          "amount": "+100.00",
+          "balance": 2157.79,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Sale of an item"
+        },
+        {
+          "id": "104",
+          "date": "2023-01-15T09:00:00Z",
+          "description": "Water bill",
+          "amount": "-30.00",
+          "balance": 2057.79,
+          "type": "Debit",
+          "category": "Utilities",
+          "notes": "Payment of water bill"
+        },
+        {
+          "id": "103",
+          "date": "2023-01-10T12:00:00Z",
+          "description": "Gasoline",
+          "amount": "-60.00",
+          "balance": 2087.79,
+          "type": "Debit",
+          "category": "Transportation",
+          "notes": "Fuel refill"
+        },
+        {
+          "id": "102",
+          "date": "2023-01-05T15:30:00Z",
+          "description": "Salary",
+          "amount": "+1500.00",
+          "balance": 2147.79,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Monthly salary"
+        },
+        {
+          "id": "101",
+          "date": "2023-01-01T10:00:00Z",
+          "description": "Grocery shopping",
+          "amount": "-45.32",
+          "balance": 647.79,
+          "type": "Debit",
+          "category": "Groceries",
+          "notes": "Weekly grocery shopping"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "userId": "664e22cc347a68ece7bdf90f",
+      "title": "Argent Bank Savings (x6712)",
+      "amount": "10,928.42",
+      "description": "Available Balance",
+      "transactions": [
+        {
+          "id": "206",
+          "date": "2023-02-25T10:30:00Z",
+          "description": "Received transfer",
+          "amount": "+500.00",
+          "balance": 10928.42,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Transfer received from a friend"
+        },
+        {
+          "id": "205",
+          "date": "2023-02-20T16:00:00Z",
+          "description": "Netflix subscription",
+          "amount": "-15.00",
+          "balance": 10428.42,
+          "type": "Debit",
+          "category": "Entertainment",
+          "notes": "Monthly subscription payment"
+        },
+        {
+          "id": "204",
+          "date": "2023-02-15T11:00:00Z",
+          "description": "Grocery shopping",
+          "amount": "-80.00",
+          "balance": 10443.42,
+          "type": "Debit",
+          "category": "Groceries",
+          "notes": "Grocery shopping"
+        },
+        {
+          "id": "203",
+          "date": "2023-02-10T09:00:00Z",
+          "description": "Freelance income",
+          "amount": "+300.00",
+          "balance": 10523.42,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Payment for freelance project"
+        },
+        {
+          "id": "202",
+          "date": "2023-02-05T13:00:00Z",
+          "description": "Restaurant",
+          "amount": "-58.50",
+          "balance": 10223.42,
+          "type": "Debit",
+          "category": "Dining",
+          "notes": "Dinner at restaurant"
+        },
+        {
+          "id": "201",
+          "date": "2023-02-01T08:45:00Z",
+          "description": "Electricity bill",
+          "amount": "-75.00",
+          "balance": 10281.92,
+          "type": "Debit",
+          "category": "Utilities",
+          "notes": "Payment of electricity bill"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "userId": "664e22cc347a68ece7bdf90f",
+      "title": "Argent Bank Credit Card (x8349)",
+      "amount": "184.30",
+      "description": "Current Balance",
+      "transactions": [
+        {
+          "id": "306",
+          "date": "2023-06-25T12:00:00Z",
+          "description": "Rental income",
+          "amount": "-65.00",
+          "balance": 184.3,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Monthly rental income"
+        },
+        {
+          "id": "305",
+          "date": "2023-06-20T09:00:00Z",
+          "description": "Internet bill",
+          "amount": "-40.00",
+          "balance": 249.3,
+          "type": "Debit",
+          "category": "Utilities",
+          "notes": "Monthly payment"
+        },
+        {
+          "id": "304",
+          "date": "2023-06-15T08:30:00Z",
+          "description": "Received transfer",
+          "amount": "+100.00",
+          "balance": 389.3,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Transfer from a family member"
+        },
+        {
+          "id": "303",
+          "date": "2023-06-10T10:00:00Z",
+          "description": "Amazon purchase",
+          "amount": "+110.00",
+          "balance": 289.3,
+          "type": "Debit",
+          "category": "Shopping",
+          "notes": "Miscellaneous purchases"
+        },
+        {
+          "id": "302",
+          "date": "2023-06-05T14:00:00Z",
+          "description": "Coffee",
+          "amount": "-5.00",
+          "balance": 179.3,
+          "type": "Debit",
+          "category": "Dining",
+          "notes": "Morning coffee"
+        },
+        {
+          "id": "301",
+          "date": "2023-06-01T07:00:00Z",
+          "description": "Spotify subscription",
+          "amount": "-9.00",
+          "balance": 184.3,
+          "type": "Debit",
+          "category": "Entertainment",
+          "notes": "Monthly subscription payment"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "userId": "664e22cc347a68ece7bdf910",
+      "title": "Argent Bank Checking (x8349)",
+      "amount": "2,082.79",
+      "description": "Available Balance",
+      "transactions": [
+        {
+          "id": "406",
+          "date": "2023-04-25T18:00:00Z",
+          "description": "Dinner at restaurant",
+          "amount": "-65.00",
+          "balance": 2082.79,
+          "type": "Debit",
+          "category": "Dining",
+          "notes": "Dinner at restaurant"
+        },
+        {
+          "id": "405",
+          "date": "2023-04-20T16:00:00Z",
+          "description": "Le Bon Coin sale",
+          "amount": "+150.00",
+          "balance": 2147.79,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Sale of an item on Le Bon Coin"
+        },
+        {
+          "id": "404",
+          "date": "2023-04-15T09:30:00Z",
+          "description": "Gas bill",
+          "amount": "-40.00",
+          "balance": 1997.79,
+          "type": "Debit",
+          "category": "Utilities",
+          "notes": "Payment of gas bill"
+        },
+        {
+          "id": "403",
+          "date": "2023-04-10T12:30:00Z",
+          "description": "Petrol",
+          "amount": "-50.00",
+          "balance": 2037.79,
+          "type": "Debit",
+          "category": "Transportation",
+          "notes": "Fuel refill"
+        },
+        {
+          "id": "402",
+          "date": "2023-04-05T14:00:00Z",
+          "description": "Salary",
+          "amount": "+2000.00",
+          "balance": 2087.79,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Monthly salary"
+        },
+        {
+          "id": "401",
+          "date": "2023-04-01T08:00:00Z",
+          "description": "Supermarket",
+          "amount": "-40.21",
+          "balance": 87.79,
+          "type": "Debit",
+          "category": "Groceries",
+          "notes": "Weekly grocery shopping"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "userId": "664e22cc347a68ece7bdf910",
+      "title": "Argent Bank Savings (x6712)",
+      "amount": "10,928.42",
+      "description": "Available Balance",
+      "transactions": [
+        {
+          "id": "506",
+          "date": "2023-05-25T10:00:00Z",
+          "description": "Received transfer",
+          "amount": "+450.00",
+          "balance": 10928.42,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Transfer received from a friend"
+        },
+        {
+          "id": "505",
+          "date": "2023-05-20T08:00:00Z",
+          "description": "Disney+ subscription",
+          "amount": "-10.00",
+          "balance": 10478.42,
+          "type": "Debit",
+          "category": "Entertainment",
+          "notes": "Monthly subscription payment"
+        },
+        {
+          "id": "504",
+          "date": "2023-05-15T12:00:00Z",
+          "description": "Grocery shopping",
+          "amount": "-100.00",
+          "balance": 10488.42,
+          "type": "Debit",
+          "category": "Groceries",
+          "notes": "Grocery shopping"
+        },
+        {
+          "id": "503",
+          "date": "2023-05-10T09:00:00Z",
+          "description": "Freelance income",
+          "amount": "+500.00",
+          "balance": 10588.42,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Payment for freelance project"
+        },
+        {
+          "id": "502",
+          "date": "2023-05-05T11:00:00Z",
+          "description": "Restaurant",
+          "amount": "-50.00",
+          "balance": 10088.42,
+          "type": "Debit",
+          "category": "Dining",
+          "notes": "Dinner at restaurant"
+        },
+        {
+          "id": "501",
+          "date": "2023-05-01T14:00:00Z",
+          "description": "Gas bill",
+          "amount": "-80.00",
+          "balance": 10138.42,
+          "type": "Debit",
+          "category": "Utilities",
+          "notes": "Payment of gas bill"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "userId": "664e22cc347a68ece7bdf910",
+      "title": "Argent Bank Credit Card (x8349)",
+      "amount": "184.30",
+      "description": "Current Balance",
+      "transactions": [
+        {
+          "id": "606",
+          "date": "2023-06-25T12:00:00Z",
+          "description": "Rental income",
+          "amount": "-65.00",
+          "balance": 184.3,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Monthly rental income"
+        },
+        {
+          "id": "605",
+          "date": "2023-06-20T09:00:00Z",
+          "description": "Internet bill",
+          "amount": "-40.00",
+          "balance": 249.3,
+          "type": "Debit",
+          "category": "Utilities",
+          "notes": "Monthly payment"
+        },
+        {
+          "id": "604",
+          "date": "2023-06-15T08:30:00Z",
+          "description": "Received transfer",
+          "amount": "+100.00",
+          "balance": 389.3,
+          "type": "Credit",
+          "category": "Income",
+          "notes": "Transfer from a family member"
+        },
+        {
+          "id": "603",
+          "date": "2023-06-10T10:00:00Z",
+          "description": "Amazon purchase",
+          "amount": "+110.00",
+          "balance": 289.3,
+          "type": "Debit",
+          "category": "Shopping",
+          "notes": "Miscellaneous purchases"
+        },
+        {
+          "id": "602",
+          "date": "2023-06-05T14:00:00Z",
+          "description": "Coffee",
+          "amount": "-5.00",
+          "balance": 179.3,
+          "type": "Debit",
+          "category": "Dining",
+          "notes": "Morning coffee"
+        },
+        {
+          "id": "601",
+          "date": "2023-06-01T07:00:00Z",
+          "description": "Spotify subscription",
+          "amount": "-9.00",
+          "balance": 184.3,
+          "type": "Debit",
+          "category": "Entertainment",
+          "notes": "Monthly subscription payment"
+        }
+      ]
+    }
+  ]
+}

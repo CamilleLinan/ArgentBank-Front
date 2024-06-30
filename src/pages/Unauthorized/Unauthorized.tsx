@@ -1,8 +1,8 @@
 import { FC } from "react";
-import "./_NotFound.scss";
+import "./_Unauthorized.scss";
 import { NavLink } from "react-router-dom";
 
-const NotFound: FC = () => {
+const Unauthorized: FC = () => {
   return (
     <main className="main bg-dark error">
       <p className="error-code">401</p>
@@ -14,4 +14,4 @@ const NotFound: FC = () => {
   );
 };
 
-export default NotFound;
+export default Unauthorized;

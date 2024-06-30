@@ -5,7 +5,7 @@ import Home from "../pages/Home/Home";
 import SignIn from "../pages/SignIn/SignIn";
 import Profile from "../pages/Profile/Profile";
 import Account from "../pages/UserAccount/UserAccount";
-import NotFound from "../pages/NotFound/NotFound";
+import Unauthorized from "../pages/Unauthorized/Unauthorized";
 import { useAppSelector } from "../redux/store";
 
 const IndexRoutes: FC = () => {
@@ -19,11 +19,11 @@ const IndexRoutes: FC = () => {
           <Route path="/login" element={<SignIn />} />
           <Route
             path="/profile"
-            element={isLoggedIn ? <Profile /> : <NotFound />}
+            element={isLoggedIn ? <Profile /> : <Unauthorized />}
           />
           <Route
             path="/account/:id"
-            element={isLoggedIn ? <Account /> : <NotFound />}
+            element={isLoggedIn ? <Account /> : <Unauthorized />}
           />
         </Route>
       </Routes>

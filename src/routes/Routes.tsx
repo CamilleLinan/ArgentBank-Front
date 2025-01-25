@@ -25,6 +25,7 @@ const IndexRoutes: FC = () => {
             path="/account/:id"
             element={isLoggedIn ? <Account /> : <Unauthorized />}
           />
+          <Route path="*" element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>
